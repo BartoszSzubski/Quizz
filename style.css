@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.background {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: rgb(24, 3, 27);
+  animation: differentColor 120s linear infinite;
+}
+.background span {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+.background span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgb(187, 24, 202);
+  transform: scale(0.1);
+  box-shadow: 0 0 10px rgb(187, 24, 202), 0 0 20px rgb(187, 24, 202), 0 0 40px rgb(187, 24, 202), 0 0 60px rgb(187, 24, 202), 0 0 80px rgb(187, 24, 202), 0 0 10px rgb(187, 24, 202);
+  border-radius: 50%;
+  pointer-events: none;
+  transition: 2.5s;
+}
+.background span:hover::before {
+  transform: scale(2.5);
+  transition: 0s;
+}
+
+@keyframes differentColor {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+.app {
+  height: 720px;
+  width: 850px;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+.app h1 {
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 20px;
+}
+.app .quiz {
+  padding: 20px 0;
+}
+.app .quiz .answer-buttons {
+  padding: 30px 0;
+}
+.app .quiz .answer-buttons .btn {
+  text-align: left;
+  width: 90%;
+  background: transparent;
+  font-size: 18px;
+  padding: 20px;
+  margin: 15px;
+  color: inherit;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.app .quiz .answer-buttons .btn:hover {
+  color: white;
+  box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+  transition: 0.2s;
+}
+.app .quiz .answer-buttons .btn:active {
+  color: white;
+  box-shadow: 0 0 10px #4caf50, 0 0 40px #4caf50, 0 0 80px #4caf50;
+  background: #4caf50;
+  transition: 0.2s;
+}
+.app .next {
+  padding: 20px;
+  margin: 15px;
+  font-size: 18px;
+  width: 20%;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: white;
+  background: transparent;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.app .next:hover {
+  color: white;
+  box-shadow: 0 0 10px #8e21f3, 0 0 40px #8e21f3, 0 0 80px #8e21f3;
+  transition: 0.2s;
+}
+.app .next:active {
+  color: white;
+  background: #8921eb;
+  transition: 0.3s;
+}/*# sourceMappingURL=style.css.map */
