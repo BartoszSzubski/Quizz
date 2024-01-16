@@ -92,22 +92,21 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
-.app .quiz .answer-buttons .btn:hover {
+.app .quiz .answer-buttons .btn:hover:not([disabled]) {
   color: white;
   box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
   transition: 0.2s;
 }
-.app .quiz .answer-buttons .btn:active {
-  color: white;
-  box-shadow: 0 0 10px #4caf50, 0 0 40px #4caf50, 0 0 80px #4caf50;
-  background: #4caf50;
-  transition: 0.2s;
+.app .quiz .answer-buttons .btn:disabled {
+  cursor: no-drop;
 }
 .app .next {
   padding: 20px;
-  margin: 15px;
+  margin: 15px auto;
   font-size: 18px;
   width: 20%;
+  align-items: center;
+  justify-content: center;
   text-transform: uppercase;
   font-weight: 600;
   color: white;
@@ -116,6 +115,11 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+.app .next button {
+  text-align: center;
+  align-items: center;
+  display: flex;
 }
 .app .next:hover {
   color: white;
@@ -126,4 +130,18 @@ body {
   color: white;
   background: #8921eb;
   transition: 0.3s;
+}
+
+.correct {
+  color: white;
+  box-shadow: 0 0 10px #4caf50, 0 0 40px #4caf50, 0 0 80px #4caf50;
+  background: #4caf50;
+  transition: 0.2s;
+}
+
+.incorrect {
+  color: white;
+  box-shadow: 0 0 10px #af4c4c, 0 0 40px #af4c4c, 0 0 80px #af4c4c;
+  background: #af4c4c;
+  transition: 0.2s;
 }/*# sourceMappingURL=style.css.map */
