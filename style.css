@@ -52,8 +52,11 @@ body {
     filter: hue-rotate(360deg);
   }
 }
-.app {
+.expanded {
   height: 720px;
+}
+
+.app {
   width: 850px;
   background: rgba(0, 0, 0, 0.5);
   -webkit-backdrop-filter: blur(10px);
@@ -65,8 +68,11 @@ body {
   z-index: 1;
   text-align: center;
   color: white;
-  padding: 20px;
+  padding: 20px 50px;
   border-radius: 5px;
+  overflow: hidden;
+  transition: height 0.5s ease-in-out;
+  height: auto;
 }
 .app h1 {
   text-transform: uppercase;
