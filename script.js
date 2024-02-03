@@ -10,17 +10,17 @@ let currentQuestionIndex = 0;
 let score = 0;
 
 function beforeGame() {
-  beforeContainer.style.visibility = "visible";
-  gameContainer.style.visibility = "hidden";
+  beforeContainer.style.display = "block";
+  gameContainer.style.display = "none";
   questionCaption.innerHTML =
     "Welcome to our thrilling quiz adventure! 🌟 Are you prepared to challenge your knowledge? 🧠 Get ready for a journey of questions and answers that will test your wits and keep you entertained. 🚀 Let the quiz excitement begin!";
   nextBtn.innerHTML = "Start game";
-  answerBtns.style.visibility = "hidden";
+  answerBtns.style.display = "none";
 }
 function startGame() {
-  beforeContainer.style.visibility = "hidden";
-  gameContainer.style.visibility = "visible";
-  answerBtns.style.visibility = "visible";
+  beforeContainer.style.display = "none";
+  gameContainer.style.display = "block";
+  answerBtns.style.display = "block";
   currentQuestionIndex = 0;
   score = 0;
   nextBtn.innerHTML = "Next";
